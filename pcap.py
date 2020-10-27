@@ -1,13 +1,14 @@
-# from scapy.all import *
-# import sys
+from scapy.all import *
+import os
 
 def main():
-    # sys.stdout.write("Hello")
-    # print("hello")
+    print("hello")
     
-    scapy_cap = rdpcap('file.pcap')
-    for packet in scapy_cap:
-        print packet[IPv6].src
+    print os.sys.path
+    
+    # scapy_cap = rdpcap('file.pcap')
+    # for packet in scapy_cap:
+    #     print packet[IPv6].src
 
 if __name__ == "__main__":
     main()
