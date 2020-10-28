@@ -52,7 +52,7 @@ def main():
     print("inside dmain")
     sniffPackets(iface)
 
-def sniffPackets(iface = None):
+def sniffPackets(iface = "wlan0"):
     """
     Sniff 80 port packets with `iface`, if None (default), then the
     Scapy's default interface is used
@@ -67,6 +67,7 @@ def sniffPackets(iface = None):
         print("else")
         # sniff with default interface
         sniff(filter="port 80", prn=processPacket, store=False)
+        print("done with sniff")
         
     print("LEFT SNIFFPAACKTES")
         
